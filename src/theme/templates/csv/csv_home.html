@@ -2,32 +2,31 @@
 
 {% block content %}
 <div class="flex flex-col h-full w-full items-center justify-evenly">
-<div class="flex items-center h-1/6">
-    <h1 class="text-center text-5xl drop-shadow-md">
-        CSV Building
-    </h1>
-</div>
-
 
 <form action="" method="post" enctype="multipart/form-data"
       class="flex h-2/3 flex-col items-center justify-evenly w-full">
     <div id="upload_csv"
-         class="flex h-1/6 flex-row items-center justify-evenly bg-slate-200 shadow-lg rounded-sm
+         class="flex h-1/6 flex-row items-center justify-evenly bg-slate-200 drop-shadow-md rounded-sm
                 px-6">
-        <h2 class="text-3xl mr-5 drop-shadow-sm">
+        <h2 class="text-3xl mr-5 drop-shadow-sm text-gray-900">
             Upload Your CSV: 
         </h2>
-        <div class="">
+        <div class="text-gray-900">
             {{form.csv}}
         </div>
     </div>
     <div id="csv_functions"
          class="h-4/6 flex flex-row items-center justify-evenly">
-        <div>
-            Remove Duplicates
+        <div class="bg-slate-100 drop-shadow-sm flex flex-row px-2 py-4 
+                    justify-evenly items-center hover:drop-shadow-lg duration-300">
+            <h3 class="text-2xl text-gray-900 mr-4">
+            {{form.remove_duplicates.label}} 
+            </h3>
+            {{form.remove_duplicates}}
         </div>
     </div>
-    <button class="text-3xl text-center flex bg-slate-200 px-4 py-4 shadow-lg 1/6 mb-20">
+    <button class="text-3xl text-center flex bg-slate-100 px-4 py-4 drop-shadow-sm text-gray-900 mb-20
+                    hover:bg-slate-300 hover:text-gray-700 hover:drop-shadow-lg duration-300">
         Submit
     </button>
 </form>
