@@ -46,10 +46,12 @@ INSTALLED_APPS = [
     # Local
     'accounts',
     'theme',
+    'csv_app',
 
     # Third Party
     'tailwind',
     'django_htmx',
+    'django_browser_reload',
 ]
 
 TAILWIND_APP_NAME = "theme"
@@ -62,6 +64,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Third Party
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
 
